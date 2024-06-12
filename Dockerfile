@@ -1,6 +1,6 @@
-FROM maven:3.8.5-openjdk-21
+FROM maven:3.8.5-openjdk-21 AS build
 COPY /src /src
-COPY pom.xml
+COPY pom.xml /
 RUN mvn -f /pom.xml clean package
 
 FROM openjdk:21-jdk-slim
