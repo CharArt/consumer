@@ -1,9 +1,9 @@
-FROM maven:3.8.5-openjdk-21 AS build
+FROM maven:3.8.5-openjdk-17 AS build
+COPY pom.xml .
 COPY /src /src
-COPY pom.xml /
-RUN mvn -f /pom.xml clean package
+RUN mvn clean package
 
-FROM openjdk:21-jdk-slim
-COPY --from=build /target/*.jar app.jar
+FROM openjdk:21-jdk
+COPY --from=build /target/*.jar application.jar
 EXPOSE 8082
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "application.jar"]

@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS data(
-    id bigserial primary key,
-    sensor_id bigint not null,
-    timestamp timestamp not null,
-    measurement float not null,
-    type varchar not null
+    id bigserial PRIMARY KEY,
+    sensor_id bigint NOT NULL,
+    timestamp timestamp NOT NULL,
+    measurement float NOT NULL,
+    type varchar NOT NULL
 );

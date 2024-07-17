@@ -20,7 +20,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String servers;
 
-    @Value("${topic}")
+    @Value("${topics}")
     private List<String> topics;
 
     private final XML settings;

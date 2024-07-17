@@ -12,8 +12,8 @@ public final class TextPath {
     @Override
     public String toString() {
         return this.xml.nodes(this.node)
-                .getFirst()
+                .get(0)
                 .xpath("text()")
-                .getFirst();
+                .get(0);
     }
 }

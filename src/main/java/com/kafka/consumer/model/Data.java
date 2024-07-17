@@ -20,7 +20,6 @@ public class Data {
 
     private Long sensorId;
 
-
     private LocalDateTime timestamp;
 
     private double measurement;
