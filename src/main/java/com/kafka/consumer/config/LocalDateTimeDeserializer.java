@@ -12,7 +12,7 @@ public class LocalDateTimeDeserializer implements JsonDeserializer<LocalDateTime
     @Override
     public LocalDateTime deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
         JsonArray jsonArray = json.getAsJsonArray();
-        if (jsonArray.size() > 5) {
+        if (jsonArray.size() == 6) {
             int year = jsonArray.get(0).getAsInt();
             int month = jsonArray.get(1).getAsInt();
             int day = jsonArray.get(2).getAsInt();
